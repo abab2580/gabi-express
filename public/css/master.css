@@ -1,0 +1,21 @@
+.a_propos
+{
+    border: 0,2px black solid;
+    padding: 15%;
+    background-image: url(https://ordesong.org/wp-content/uploads/2016/06/MG_5219.jpg);
+}
+h4, h2
+{
+    color: red;
+}
+.btn_contact
+{
+display: block;
+margin: auto; 
+}
+.coprying
+{
+    border: 0,1 solid red;
+    background-color: red;
+    color: white;
+}
