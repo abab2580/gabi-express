@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+<div class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Gabi-express</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor03">
+    
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="#">Aide </a>
+      </li>
+      <li class="nav-item mr-1 ">
+        <a class="btn btn-danger" href="#" role="button">S'inscrire</a>
+      </li>
+      <li class="nav-item ml-1">
+        <a class="btn btn-danger" href="#" role="button">Se connecter</a>
+      </li>
+    </ul>
+   <select class="ml-1" >
+        <option value=un>EN</option>
+        <option value=deux>FR</option>
+        <option value=trois>ES</option>
+   </select>
+  </div>
+</div>
+<div class="body_home">
+<div class="a_propos">
+<h2>A propos de nous</h2>
+ Nous changeons la façon dont des millions de familles prennent soin de leurs membres.
+</div>
+
+<div class="jumbotron mt-3">
+        <h2 class="text-center">Nos valeurs</h2><br>
+       
+        <div class="row">
+           <div class="col-md-4">
+               <div class="card bg-light mb-3">
+                   <img src="https://d3v4jsc54141g1.cloudfront.net/uploads/reward_image/image/102785/Pouce-Leve-1440578126.png" alt="image de l'appartement" style="height: 250px; 20%; display: block">
+                   <div class="card-body text-center">
+                       <h4 class="card-title text-center">
+                           Embrasser la transparence
+                       </h4>
+                       <p class="card-text text-center">
+                          Nous valorisons et respectons nos clients et nos partenaires. Si ce n'était pas eux, nous ne serions pas nous.
+                       </p>
+                   </div>
+               </div>
+           </div>
+
+           <div class="col-md-4">
+               <div class="card bg-light mb-3"> 
+                   <img src="https://previews.123rf.com/images/alexwhite/alexwhite1604/alexwhite160405234/55722053-sourire-rouge-%C3%A9tiquette-autocollant-%C3%A9tiquette-%C3%A9toiles-timbre-banni%C3%A8re-publicit%C3%A9-insigne-embl%C3%A8me-ic%C3%B4ne-web.jpg" alt="image sourire" style="height: 250px; 20%; display: block">
+                   <div class="card-body">
+                       <h4 class="card-title text-center">
+                          Impact positif
+                       </h4>
+                       <p class="card-text text-center">
+                          Nous nous soucions les uns des autres et croyons en des relations dans lesquels les gens se valorisent et se soutiennent mutuellement. 
+                       </p>
+                   </div>
+               </div>
+           </div>
+           <div class="col-md-4">
+               <div class="card bg-light mb-3">
+                   <img src="http://images.4ever.eu/data/download/amour/coeurs/coeur-rouge-216151.jpg?no-logo" alt="image coeur" style="height: 250px; 20%; display: block">
+                   <div class="card-body">
+                       <h4 class="card-title text-center">
+                          Passion
+                       </h4>
+                       <p class="card-text text-center">
+                           Nous avons aider nos clients à atteindre leurs objectifs, prendre soin de leurs proches ou simplement faire fructifier leurs économies. 
+                       </p>
+                   </div>
+               </div>
+           </div>
+           <div class="btn_contact"><br><br>
+            <a class="btn btn-warning  center-block " href="#" role="button">Contactez-nous</a>
+           </div>
+    </div>
+</div>
+</div>
+{% endblock %}
