@@ -1,3 +1,4 @@
+<div class="container">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#"> </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,6 +11,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">contact@gabi-express.com</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path('a_propos') }}">a propos de nous</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
@@ -25,7 +29,32 @@
     </ul>
   </div>
 </nav>
+<div class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Gabi-express</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  <div class="collapse navbar-collapse" id="navbarColor03">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Aide </a>
+          </li>
+          <li class="nav-item mr-1 ">
+            <a class="btn btn-danger" href="#" role="button">S'inscrire</a>
+          </li>
+          <li class="nav-item ml-1">
+            <a class="btn btn-danger" href="#" role="button">Se connecter</a>
+          </li>
+    </ul>
+    <select class="ml-1" >
+          <option value=un>EN</option>
+          <option value=deux>FR</option>
+          <option value=trois>ES</option>
+    </select>
+  </div>
+</div>
+</div>
 
 {# <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Gabi-express</a>
