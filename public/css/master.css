@@ -27,11 +27,20 @@ margin: auto;
 {
     background-image: url(https://previews.123rf.com/images/karelnoppe/karelnoppe1512/karelnoppe151200028/49440570-close-up-portrait-de-la-m%C3%A8re-et-de-l-enfant-africain-mignon-embrassant-l-ext%C3%A9rieur-.jpg);
 }
-#pvq
+#form_pvq
 {
-    font-size: 100%;
+    font-size: 110%;
+    border: 0,2px solid black;
+    padding: 18px 18px;
+    width: 80%;
+    margin: auto; 
+    background-color: #EFF2EB ;
+    opacity: O.73;
+    border-radius: 5px;
 }
-#btn_valider
+#temoigne
 {
-    background-color: green;
+   width: 60%;
+   margin: auto;
+   font-size: 20px;;
 }
