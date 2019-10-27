@@ -1,0 +1,39 @@
+#carousel-deals,
+#carousel-testimonials {
+  margin-bottom: 50px;
+  /* the slides */
+  .slick-slide {
+    margin: 0 20px;
+  }
+  /* the parent */
+  .slick-list {
+    margin: 0 -20px;
+  }
+}
+
+#carousel-testimonials {
+  .slick-track {
+    padding-top: 12px;
+  }
+
+  .slick-dots {
+    bottom: -50px;
+  }
+
+  .slick-dots li,
+  .slick-dots li button,
+  .slick-dots li button::before {
+    width: 44px;
+    height: 3px;
+  }
+
+  .slick-dots li button::before {
+    content: "";
+    background-color: #dedede;
+    opacity: 1;
+  }
+
+  .slick-dots li.slick-active button::before {
+    background-color: $pink;
+  }
+}

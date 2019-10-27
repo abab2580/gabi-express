@@ -1,0 +1,151 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Page Title -->
+    <title>Contact - Gabi Express</title>
+
+  </head>
+  <body>
+
+    <!-- BEGIN HEADER -->
+    <header class="l-header">
+      <div id="l-nav" class="l-nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav class="navbar navbar-expand-md navbar-light">
+
+                <a class="navbar-brand" href="">
+                  <img src="img/logo-grand.png" class="img-fluid">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto py-4 py-md-0">
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                      <a class="nav-link" href="{{ path ('help')}}">Aide</a>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mon compte</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Recommander un ami</a>
+                        <a class="dropdown-item" href="#">Mes transactions</a>
+                        <a class="dropdown-item" href="#">Mon profil</a>
+                      </div>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">EN</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">FR</a>
+                      </div>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link nav-cart" data-cart="2" href="#">
+                        <i class="fas fa-cart-arrow-down"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- BEGIN MAIN CONTENT -->
+    <main class="l-main">
+      <section class="l-banner">
+        <div class="container">
+          <div class="custom-title text-white">Contactez-nous</div>
+          <p class="custom-text text-white">Pour toutes vos questions, ou besoins de services particuliers, nous nous ferons un plaisir de vous répondre</p>
+        </div>
+      </section>
+
+      <div class="l-contact-us mount-grey">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="contact-block">
+                <h2 class="contact-block-title text-center">Remplissez le formulaire</h2>
+                <br>
+                <form class="custom-form form-contact">
+                    <div class="form-group">
+                        <input type="text" id="name" class="form-control" required />
+                        <span class="bar"></span>
+                        <label for="name">Votre nom*</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="email" type="email" class="form-control" required />
+                        <span class="bar"></span>
+                        <label for="email">Votre email*</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="msg" class="form-control" rows="5" required></textarea>
+                        <span class="bar"></span>
+                        <label for="message">Votre message*</label>
+                    </div>
+                    <div class="btn-center">
+                      <button type="button" class="btn btn-fullcolor">Envoyer le message</button>
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="contact-block">
+                <h2 class="contact-block-title text-center">Autres informations de contact</h2>
+                <br>
+                <div class="other-infos">
+                  <div class="infos">
+                    <span class="label">Ecrivez-nous</span>
+                    <div class="media">
+                      <img src="img/icons/icons8-edit-message-48.png" class="mr-3 align-self-center">
+                      <div class="media-body">
+                        <h5 class="mt-0">Email</h5>
+                        contact@gabiexprex.com
+                      </div>
+                    </div>
+                  </div>
+                  <div class="infos">
+                    <span class="label">Appel | Whatsapp</span>
+                    <div class="media">
+                      <img src="img/icons/icons8-android-48.png" class="mr-3 align-self-center">
+                      <div class="media-body">
+                        <h5 class="mt-0">Téléphone</h5>
+                        +237 6 94 75 22 24
+                      </div>
+                    </div>
+                  </div>
+                  <div class="infos">
+                    <span class="label">Adresse</span>
+                    <div class="media">
+                      <img src="img/icons/icons8-home-address-90.png" class="mr-3 align-self-center">
+                      <div class="media-body">
+                        Bonamoussadi,<br>
+                        Douala - Cameroun
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+  </body>
+</html>
+{% endblock %}

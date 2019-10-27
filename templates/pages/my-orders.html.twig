@@ -1,0 +1,291 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Page Title -->
+    <title>Liste des commandes - Gabi Express</title>
+
+  </head>
+  <body>
+
+    <!-- BEGIN HEADER -->
+    <header class="l-header">
+      <div id="l-nav" class="l-nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav class="navbar navbar-expand-md navbar-light">
+              
+                <a class="navbar-brand" href="">
+                  <img src="img/logo-grand.png" class="img-fluid">
+                </a>	
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto py-4 py-md-0">
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                      <a class="nav-link" href="{{ path ('help')}}">Aide</a>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mon compte</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Recommander un ami</a>
+                        <a class="dropdown-item" href="#">Mes transactions</a>
+                        <a class="dropdown-item" href="#">Mon profil</a>
+                      </div>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">EN</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">FR</a>
+                      </div>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link nav-cart" data-cart="2" href="#">
+                        <i class="fas fa-cart-arrow-down"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>		
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- BEGIN MAIN CONTENT -->
+    <main class="l-main">
+      <div class="breadcrumb-block">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="breadcrumb-block-row">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ path ('home')}}">Accueil</a></li>
+                    <li class="breadcrumb-item"><a href="#">Mes informations</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Editer</li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="l-profile">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="profile-title">Modifier le profil</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="side-nav">
+                <h2 class="side-nav-title">Georges Gaston</h2>
+                <nav>
+                  <ul>
+                    <li class="active">
+                      <a href="#">Mon profil</a>
+                    </li>
+                    <li class="active">
+                      <a href="#">Mes commandes <span class="badge badge-light">1</span></a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="col-lg-9">
+              <div class="list-orders">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <form class="form-search-orders">
+                       <div class="input-group input-group-lg">
+                        <input type="search" class="form-control" id="search" placeholder="Rechercher">
+                        <span class="input-group-append">
+                          <button type="submit" class="btn btn-secondary" type="button"><i class="fas fa-search"></i></button>
+                        </span>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-lg-6">
+                    <div id="reportrange" class="reportrange">
+                        <i class="far fa-calendar-alt"></i>&nbsp;
+                        <span></span> <i class="fas fa-chevron-down"></i>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="table-responsive">
+                      <table class="table table-hover table-orders">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Date de commande</th>
+                            <th scope="col">Statut</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">00000100</th>
+                            <td>21/02/2019</td>
+                            <td>En cours</td>
+                            <td>
+                              <div class="dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Actions
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                  <a class="dropdown-item" href="#">Voir</a>
+                                  <a class="dropdown-item" href="#">Supprimer</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">00000100</th>
+                            <td>21/02/2019</td>
+                            <td>En cours</td>
+                            <td>
+                              <div class="dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Actions
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                  <a class="dropdown-item" href="#">Voir</a>
+                                  <a class="dropdown-item" href="#">Supprimer</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">00000100</th>
+                            <td>21/02/2019</td>
+                            <td>En cours</td>
+                            <td>
+                              <div class="dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Actions
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                  <a class="dropdown-item" href="#">Voir</a>
+                                  <a class="dropdown-item" href="#">Supprimer</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">00000100</th>
+                            <td>21/02/2019</td>
+                            <td>En cours</td>
+                            <td>
+                              <div class="dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Actions
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                  <a class="dropdown-item" href="#">Voir</a>
+                                  <a class="dropdown-item" href="#">Supprimer</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">00000100</th>
+                            <td>21/02/2019</td>
+                            <td>En cours</td>
+                            <td>
+                              <div class="dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Actions
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                  <a class="dropdown-item" href="#">Voir</a>
+                                  <a class="dropdown-item" href="#">Supprimer</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <br>
+                    <nav class="pagination" aria-label="Page navigation example">
+                      <ul class="pagination">
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+  
+    <script type="text/javascript">
+      <!--
+      $(document).ready(function()
+      {
+
+        var start = moment().subtract(29, 'days');
+        var end = moment();
+
+        function cb(start, end) 
+        {
+            $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        }
+
+        $('#reportrange').daterangepicker({
+            startDate: start,
+            endDate: end,
+            ranges: {
+               'Today': [moment(), moment()],
+               'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+               'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+               'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+               'This Month': [moment().startOf('month'), moment().endOf('month')],
+               'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            }
+        }, cb);
+
+        cb(start, end);
+      });
+    //-->
+      //$('input[name="dates"]').daterangepicker();
+    </script>
+  </body>
+</html>
+{% endblock %}

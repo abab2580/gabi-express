@@ -1,0 +1,135 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Page Title -->
+    <title>Aide - Gabi Express</title>
+
+  </head>
+  <body>
+
+    <!-- BEGIN HEADER -->
+    <header class="l-header">
+      <div id="l-nav" class="l-nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav class="navbar navbar-expand-md navbar-light">
+              
+                <a class="navbar-brand" href="">
+                  <img src="img/logo-grand.png" class="img-fluid">
+                </a>	
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto py-4 py-md-0">
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                      <a class="nav-link" href="{{ path ('help')}}">Aide</a>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link nav-auth" href="{{ path ('register')}}">S'inscire</a>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link nav-auth" href="{{ path ('login')}}">Se connecter</a>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">EN</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">FR</a>
+                      </div>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link nav-cart" data-cart="2" href="#">
+                        <i class="fas fa-cart-arrow-down"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>		
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- BEGIN MAIN CONTENT -->
+    <main class="l-main">
+      
+      <section class="l-ccm">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="custom-title">Comment ça marche ?</h1>
+              <br />
+              <div class="ccm-help-step">
+                <img src="img/ccm-1.jpg" class="img-fluid block" alt="">
+                <div class="media block">
+                  <span class="mr-5 align-self-center number">1</span>
+                  <div class="media-body">
+                    <h5 class="mt-0 mb-3 ccm-help-step-title">
+                      Je selectionne moi-même les produits ou un service en précisant le contact du bénéficiaire.
+                    </h5>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="ccm-help-step inverse">
+                <img src="img/ccm-2.jpg" class="img-fluid block" alt="">
+                <div class="media block">
+                  <span class="mr-5 align-self-center number">2</span>
+                  <div class="media-body">
+                    <h5 class="mt-0 mb-3 ccm-help-step-title">
+                      Je paye en toute sécurité en utilisant un des nombreux moyens de payement au choix.
+                    </h5>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="ccm-help-step">
+                <img src="img/ccm-3.jpg" class="img-fluid block" alt="">
+                <div class="media block">
+                  <span class="mr-5 align-self-center number">3</span>
+                  <div class="media-body">
+                    <h5 class="mt-0 mb-3 ccm-help-step-title">
+                      Le bénéficiaire reçoit le CODE unique par SMS et est livré en moins de 36 heures.
+                    </h5>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  </div>
+                </div>
+              </div>  
+              <br>
+              <div class="ccm-help-step inverse">
+                <img src="img/ccm-4.jpg" class="img-fluid block" alt="">
+                <div class="media block">
+                  <span class="mr-5 align-self-center number">4</span>
+                  <div class="media-body">
+                    <h5 class="mt-0 mb-3 ccm-help-step-title">
+                      Livraison et confirmation
+                    </h5>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  </div>
+                </div>
+              </div>
+              <br><br>
+              <div class="btn-center">
+                <a href="#" class="btn btn-fullcolor">Créez un compte, c'est gratuit</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </body>
+</html>
+{% endblock %}

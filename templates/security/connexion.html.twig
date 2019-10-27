@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Page Title -->
+    <title>Connexion - Gabi Express</title>
+
+  </head>
+  <body>
+
+    <!-- BEGIN HEADER -->
+    <header class="l-header">
+      <div id="l-nav" class="l-nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav class="navbar navbar-expand-md navbar-light">
+
+                <a class="navbar-brand" href="">
+                  <img src="img/logo-grand.png" class="img-fluid">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto py-4 py-md-0">
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                      <a class="nav-link" href="{{ path ('help')}}">Aide</a>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link nav-auth" href="{{ path ('register')}}">S'inscire</a>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link nav-auth" href="{{ path ('login')}}">Se connecter</a>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">EN</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">FR</a>
+                      </div>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link nav-cart" data-cart="2" href="#">
+                        <i class="fas fa-cart-arrow-down"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- BEGIN MAIN CONTENT -->
+    <main class="l-main">
+
+      <section class="l-authentification connexion">
+        <div class="container">
+          <div class="parent-blck">
+            <div class="auth">
+              <h1 class="custom-title">Se connecter</h1>
+              <form action="{{ path('login') }}" method="post">
+                <div class="form-group">
+                  <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" required name="_username">
+                </div>
+                <br>
+                <div class="form-group">
+                  <input type="password" class="form-control form-control-lg" id="exampleInputPassword" placeholder="Mot de passe" required name="_password">
+                </div>
+                 <a class="auth-link" href="{{ path ('passe_oublier')}}">Mot de passe oublié?</a>
+                <br>
+                <button type="submit" class="btn btn-fullcolor">S'identifier</button>
+              </form>
+              <br>
+              <div class="or">
+                <span>ou</span>
+              </div>
+              <br>
+              <div class="other-auth">
+                <a href="https://accounts.google.com/" class="btn btn-lg btn-other-auth google">
+                  <i class="fab fa-google"></i> Avec Google
+                </a>
+                <a href="https://www.facebook.com" class="btn btn-lg btn-other-auth facebook">
+                  <i class="fab fa-facebook-f"></i> Avec Facebook
+                </a>
+              </div>
+              <br>
+              <p class="auth-text">Pas encore inscrit ?</p>
+              <a class="auth-link" href="{{ path ('register')}}">S'inscrire</a>
+            </div>
+            <div class="side-img">
+              <h2 class="side-img-text">
+                Ravis de vous revoir<br>
+                Connectez-vous
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </body>
+</html>
+{% endblock %}
+ 

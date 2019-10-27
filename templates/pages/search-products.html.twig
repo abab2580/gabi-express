@@ -1,0 +1,247 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Page Title -->
+    <title>Search products - Gabi Express</title>
+
+  </head>
+  <body>
+
+    <!-- BEGIN HEADER -->
+    <header class="l-header">
+      <div id="l-nav" class="l-nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav class="navbar navbar-expand-md navbar-light">
+              
+                <a class="navbar-brand" href="{{ path ('home')}}">
+                  <img src="img/logo-grand.png" class="img-fluid">
+                </a>	
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto py-4 py-md-0">
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                      <a class="nav-link" href="{{ path ('help')}}">Aide</a>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mon compte</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Recommander un ami</a>
+                        <a class="dropdown-item" href="#">Mes transactions</a>
+                        <a class="dropdown-item" href="#">Mon profil</a>
+                      </div>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">EN</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">FR</a>
+                      </div>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link nav-cart" data-cart="2" href="#">
+                        <i class="fas fa-cart-arrow-down"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>		
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- BEGIN MAIN CONTENT -->
+    <main class="l-main">
+      <div class="breadcrumb-block">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="breadcrumb-block-row">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ path ('home')}}">Accueil</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Supermarché Santa Lucia - Bonamoussadi</li>
+                  </ol>
+                </nav>
+                <a class="btn btn-lg btn-fullcolor" href="#">Proposer un produit</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="l-search-products">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="categorie-title">Categories</h2>
+              <nav class="categorie-links d-none d-lg-block">
+                <ul>
+                  <li><a href="#">Tous les produits</a></li>
+                  <li><a href="#">Alimentaire</a></li>
+                  <li><a href="#">Bien être / Beauté</a></li>
+                  <li><a href="#">Boissons / Vins</a></li>
+                  <li><a href="#">Electromenager</a></li>
+                  <li><a href="#">Femme</a></li>
+                  <li><a href="#">Fournitures scolaires</a></li>
+                  <li><a href="#">Fruits et légumes</a></li>
+                  <li><a href="#">Hygiène / Santé</a></li>
+                  <li><a href="#">Maison</a></li>
+                  <li><a href="#">Nos packs</a></li>
+                  <li><a href="#">Patisserie</a></li>
+                  <li><a href="#">Petit-déjeuner</a></li>
+                  <li><a href="#">Pour bébé</a></li>
+                  <li><a href="#">Stylo et accessoires</a></li>
+                  <li><a href="#">Viandes / Poissons</a></li>
+                </ul>
+              </nav>
+
+              <div class="search-form d-lg-none">
+                <form>
+                  <div class="form-group">
+                    <div class="form-control-large">
+                      <select id="category" name="category" data-placeholder="Tous les produits">
+                        <option value="">Tous les produits</option>
+                        <option>Alimentaire</option>
+                        <option>Bien être / Beauté</option>
+                        <option>Boissons / Vins</option>
+                        <option>Electromenager</option>
+                        <option>Fournitures scolaires</option>
+                        <option>Fruits et légumes</option>
+                        <option>Hygiène / Santé</option>
+                        <option>Maison</option>
+                        <option>Nos packs</option>
+                        <option>Patisserie</option>
+                        <option>Petit-déjeuner</option>
+                        <option>Pour bébé</option>
+                        <option>Stylo et accessoires</option>
+                        <option>Viandes / Poissons</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-9">
+              <form action="" class="search-bar">
+                <div class="input-group input-group-lg mb-3">
+                  <input type="search" class="form-control" placeholder="Rechercher un produit" aria-label="Rechercher un produit" aria-describedby="button-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-secondary" type="button" id="button-addon2">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <br>
+              <div class="list-products">
+                <div class="card card-custom product">
+                  <div class="card-img-top">
+                    <img src="img/product.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title text-center">LAIT TOP MILK NATURE 18 G</h5>
+                    <p class="card-text pink text-center">50 Fcfa</p>
+                    <div class="btn-center">
+                      <a href="#" class="btn btn-fullcolor added">
+                        <img src="img/icons/icons8-ok-24.png" class="img-fluid" alt="">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-custom product">
+                  <div class="card-img-top">
+                    <img src="img/product.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title text-center">LAIT TOP MILK NATURE 18 G</h5>
+                    <p class="card-text pink text-center">50 Fcfa</p>
+                    <div class="btn-center">
+                      <a href="#" class="btn btn-fullcolor">Ajouter au panier</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-custom product">
+                  <div class="card-img-top">
+                    <img src="img/product.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title text-center">LAIT TOP MILK NATURE 18 G</h5>
+                    <p class="card-text pink text-center">50 Fcfa</p>
+                    <div class="btn-center">
+                      <a href="#" class="btn btn-fullcolor">Ajouter au panier</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-custom product">
+                  <div class="card-img-top">
+                    <img src="img/product.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title text-center">LAIT TOP MILK NATURE 18 G</h5>
+                    <p class="card-text pink text-center">50 Fcfa</p>
+                    <div class="btn-center">
+                      <a href="#" class="btn btn-fullcolor">Ajouter au panier</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-custom product">
+                  <div class="card-img-top">
+                    <img src="img/product.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title text-center">LAIT TOP MILK NATURE 18 G</h5>
+                    <p class="card-text pink text-center">50 Fcfa</p>
+                    <div class="btn-center">
+                      <a href="#" class="btn btn-fullcolor">Ajouter au panier</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-custom product">
+                  <div class="card-img-top">
+                    <img src="img/product.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title text-center">LAIT TOP MILK NATURE 18 G</h5>
+                    <p class="card-text pink text-center">50 Fcfa</p>
+                    <div class="btn-center">
+                      <a href="#" class="btn btn-fullcolor">Ajouter au panier</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-custom product">
+                  <div class="card-img-top">
+                    <img src="img/product.jpg" class="card-img" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title text-center">LAIT TOP MILK NATURE 18 G</h5>
+                    <p class="card-text pink text-center">50 Fcfa</p>
+                    <div class="btn-center">
+                      <a href="#" class="btn btn-fullcolor">Ajouter au panier</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="btn-center">
+                <a href="#" class="btn btn-lg btn-more">Voir plus de produits</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </body>
+</html>
+{% endblock %}

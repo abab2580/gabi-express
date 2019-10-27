@@ -1,0 +1,113 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+ <main class="l-main">
+      
+      <section class="l-authentification register">
+        <div class="container">
+          <div class="parent-blck">
+            <div class="auth">
+              <h1 class="custom-title">Créer un compte</h1>
+
+
+            {{ form_start(form )  }}
+            
+            <div class="form-group">
+                {{ form_row(form.last_name , {'label':'Nom','attr': {'placeholder': 'Veuillez entrer votre nom','class': 'form-control form-control-lg', 'id': 'exampleInputEmail1'}})  }}
+            </div>
+            <div class="form-group">
+                {{ form_row(form.first_name, {'label':'Prenom', 'attr': {'placeholder': 'Veuillez entrer votre prenom','class': 'form-control form-control-lg', 'id': 'exampleInputEmail1'}})  }}
+            </div>
+                <div class="form-group">
+                {{ form_row(form.email, {'attr': {'placeholder': 'Veuillez entrer votre mail','class': 'form-control form-control-lg', 'id': 'exampleInputEmail1'}})  }}
+                </div>
+                <div class="form-group">
+                {{ form_row(form.phone , {'label':'Numero', 'attr': {'placeholder': 'Saisissez votre numero de téléphone','class': 'form-control form-control-lg'}})  }}
+                </div>
+                <div class="form-group">
+                {{ form_row(form.password, {'label':'Mot de passe','attr':{'placeholder': 'saisissez votre mot de passe...', 'class': 'form-control form-control-lg', 'id': 'password'}}) }}
+                </div>
+                <div class="form-group">
+                {{ form_row(form.confirm_password, {'label':'Confirmer Mot de passe','attr':{'placeholder': 'repetez mot de passe...', 'class': 'form-control form-control-lg'}}) }}
+                </div>
+                <button type="submit" class="btn btn-fullcolor">Créer le compte</button>
+            {{ form_end(form) }}
+
+
+            <br>
+              <div class="or">
+                <span>ou</span>
+              </div>
+              <br>
+              <div class="other-auth">
+                <a href="#" class="btn btn-lg btn-other-auth google">
+                  <i class="fab fa-google"></i> Avec Google
+                </a>
+                <a href="#" class="btn btn-lg btn-other-auth facebook">
+                  <i class="fab fa-facebook-f"></i> Avec Facebook
+                </a>
+              </div>
+              <br>
+              <p class="auth-text">Déjà inscrit ?</p>
+              <a class="auth-link" href="{{ path ('login')}}">Se connecter</a>
+            </div>
+            <div class="side-img">
+              <h2 class="side-img-text">
+                Faites du bien à ceux<br>
+                que vous aimez<br>
+
+                <span style="font-size: 28px;">Créez un compte</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+
+                </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    
+      </section>
+
+    </main>
+
+    <script src="vendor2/intl-tel-input/js/intlTelInput.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        var input = document.querySelector("input[type=tel]");
+        window.intlTelInput(input, {
+          initialCountry: "auto",
+          geoIpLookup: function(callback) {
+            // $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+            //   var countryCode = (resp && resp.country) ? resp.country : "";
+            //   console.log(callback)
+            //   callback("CM");
+            // });
+            callback("CM");
+          },
+          utilsScript: "vendor2/intl-tel-input/js/utils.js",
+        });
+
+        // Toggle Eye/Eye Slash in input password on register form
+        const btnEye = document.querySelector("#basic-eye");
+
+        if (btnEye) {
+          let inputPwd;
+
+          inputPwd = btnEye.parentElement.parentElement.firstElementChild;
+
+          btnEye.addEventListener("click", function(e) {
+            if (inputPwd.getAttribute("type") === "password") {
+              inputPwd.setAttribute("type", "text");
+              btnEye.innerHTML = '<i class="fas fa-eye"></i>';
+            } else {
+              inputPwd.setAttribute("type", "password");
+              btnEye.innerHTML = '<i class="fas fa-eye-slash"></i>';
+            }
+          });
+        }
+      })();
+    </script>
+            {% endblock %}

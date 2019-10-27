@@ -1,0 +1,118 @@
+.l-basket {
+	position: relative;
+	background-color: #fff;
+	margin-top: -160px;
+
+	table.table-basket {
+		margin-top: 80px;
+	}
+
+	.table-basket thead th {
+		opacity: 0.9;
+		color: #18191b;
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	.product-title {
+		opacity: 0.9;
+		color: #18191b;
+		font-size: 14px;
+		font-weight: 500;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		display: block;
+	}
+
+	.product-description {
+		opacity: 0.9;
+		color: #18191b;
+		font-size: 14px;
+		font-weight: 400;
+		text-transform: uppercase;
+		display: block;
+	}
+
+	.product-price {
+		opacity: 0.8;
+		color: #18191b;
+		font-size: 18px;
+		font-weight: 00;
+	}
+
+	.product-delete {
+		border: none;
+		background: none;
+		transition: color 0.3s ease-in-out;
+		
+		&:hover {
+			color: $pink;
+		}
+	}
+
+	.detail-form {
+
+		// .form-group {
+		// 	display: flex;
+		// 	justify-content: space-between;
+		// }
+
+		.form-qte {
+			position: relative;
+			top: -5px;
+			display: flex;
+			justify-content: space-between;
+			max-width: 140px;
+		}
+
+		input[type="text"] {
+			max-width: 50px;
+			background-color: #f7f7f7;
+			opacity: 0.67;
+			color: #18191b;
+			font-size: 18px;
+			font-weight: 700;
+			text-align: center;
+			border-radius: 7px;
+			border: none;
+			margin: 0 20px;
+		}
+
+		.controls {
+			cursor: pointer;
+			opacity: 0.8;
+			color: #18191b;
+			font-size: 24px;
+			font-weight: 700;
+		}
+	}
+
+	.resume-basket {
+		background-color: #f5f5f5;
+		padding-bottom: 30px;
+	}
+
+	.table-resume {
+		max-width: 380px;
+		border-top: 3px solid #000;
+		margin-left: auto;
+		margin-bottom: 0;
+
+		tbody th {
+			color: $dark;
+			font-size: 16px;
+			font-weight: 400;
+		}
+
+		.resume-price {
+			color: $dark;
+			font-size: 24px;
+			font-weight: 500;
+		}
+
+		.btn-fullcolor {
+			width: 100%;
+			font-weight: 500;
+		}
+	}
+}

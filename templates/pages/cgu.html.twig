@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Page Title -->
+    <title>Conditions Générales d'Utilisation - Gabi Express</title>
+
+  </head>
+  <body>
+
+    <!-- BEGIN HEADER -->
+    <header class="l-header">
+      <div id="l-nav" class="l-nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav class="navbar navbar-expand-md navbar-light">
+
+                <a class="navbar-brand" href="">
+                  <img src="img/logo-grand.png" class="img-fluid">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto py-4 py-md-0">
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                      <a class="nav-link" href="{{ path ('help')}}">Aide</a>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mon compte</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Recommander un ami</a>
+                        <a class="dropdown-item" href="#">Mes transactions</a>
+                        <a class="dropdown-item" href="#">Mon profil</a>
+                      </div>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">EN</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">FR</a>
+                      </div>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link nav-cart" data-cart="2" href="#">
+                        <i class="fas fa-cart-arrow-down"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- BEGIN MAIN CONTENT -->
+    <main class="l-main">
+      <section class="l-banner">
+        <div class="container">
+          <h1 class="custom-title text-white">CGU</h1>
+        </div>
+      </section>
+
+      <div class="l-cgu mount-grey">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="cgu-title">1. Préambule</h2>
+              <p class="text-description">
+                Les présentes conditions générales d'utilisation et de vente du service au nom commercial Familov.com régissent exclusivement les relations entre Gabi Express et l’utilisateur du Service.
+              </p>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+
+    </main>
+
+  </body>
+</html>
+{% endblock %}

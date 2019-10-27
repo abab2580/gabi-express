@@ -1,51 +1,73 @@
-<footer class="bg-dark mb-1" style="color: white">
-<div class="row ">
-           <div class="col">
-               <div class="card-body">
-                   <h5 class="card-title">Gabi-express</h5>
-                   <div class="card-text">
-                       <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quas unde voluptas.</p>
-                   </div>
-               </div>
-           </div>
-           <div class="col">
-               <div class="card-body">
-                   <h5 class="card-title">Lien utile</h5>
-                   <div class="card-text">
-                       <p><a href="">Comment ça marche</a></p>
-                       <p><a href="">Besoin d'aide</a></p>
-                       <p><a href="">Conditions d'utilisation </a></p>
-                       <p><a href="">Privacy</a></p>
-                   </div>
-               </div>
-           </div>
-           <div class="col">
-               <div class="card-body">
-                   <h5 class="card-title">sitemap </h5>
-                   <div class="card-text">
-                    <p><a href="">Accueil</a></p>
-                    <p><a href="">A propos de nous</a></p>
-                    <p><a href="">Contacts</a></p>
-                    <p><a href="">Press</a></p>
-                    <p><a href="">Job</a></p>
-                   </div>
-               </div>
-           </div>
-           <div class="col mr-2">
-               <div class="card-body">
-                   <h5 class="card-title">Newsletter </h5>
-                   <div class="card-text">
-                       <p> Vous informez sur les dernières offres.</p>
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Adresse email" aria-label="Ajouter">
-                        <button class="btn btn-outline-success my-2 my-sm-0" style="background-color: red;" type="submit">Ok</button>
-                    </form>
-
-                   </div>
-               </div>
-           </div>
- </div>
-</footer>
-<div class="mt-1  text-center">
-<p class="coprying pt-2">©Designed by @gabi-express. All right reserved. </p>
-  </div>
+<footer class="l-footer">
+        <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-sm-12">
+                <div class="footer-description">
+                  <img src="img/logo-grand.png" class="img-fluid">
+                  <br><br>
+                  <p class="footer-text">
+                    Lorem ipsum dolor sit amet co nse ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="footer-links">
+                  <h3 class="footer-title">Liens utiles</h3>
+                  <a href="{{ path ('help')}}">Comment ça marche</a>
+                  <a href="{{ path ('help')}}">Besoin d'aide</a>
+                  <a href="{{ path ('cgu')}}">Conditions d'utilisation</a>
+                  <a href="#">Privacy</a>
+                  <a href="{{ path ('faq')}}">Faq</a>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="footer-links">
+                  <h3 class="footer-title">Sitemap</h3>
+                  <a href="{{ path ('home')}}">Accueil</a>
+                  <a href="{{ path ('about')}}">A propos</a>
+                  <a href="{{ path ('contact')}}">Contacts</a>
+                  <a href="#">Presse</a>
+                  <a href="#">Job</a>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="footer-links">
+                  <h3 class="footer-title">Newsletter</h3>
+                  <p class="footer-text">Vous informez sur les dernières offres</p>
+  
+                  <form>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="newsletter" placeholder="Email address" aria-describedby="newsletterPrepend" required>
+                      <div class="input-group-append">
+                        <button type="submit" class="btn btn-fullcolor">
+                          <i class="fab fa-telegram-plane"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+  
+                  <div class="social-networks white">
+                    <a href="#" class="social-network">
+                      <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a href="#" class="social-network">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-network">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-network">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-network">
+                      <i class="fas fa-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; Designed by <a href="https://www.linkedin.com/in/jareth-ntebe">@joelthierry</a>. All rights reserved.</p>
+        </div>
+      </footer>

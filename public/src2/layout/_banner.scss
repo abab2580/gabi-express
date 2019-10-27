@@ -1,0 +1,11 @@
+.l-banner {
+	padding-top: 50px;
+	min-height: 460px;
+	background-color: $pink;
+	position: relative;
+	z-index: 1;
+
+	&.reverse {
+		background-color: #fff;
+	}
+}

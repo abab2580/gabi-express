@@ -1,0 +1,87 @@
+.property-filter {
+  margin-top: 100px;
+  position: relative;
+  text-align: center;
+  border: none;
+  color: #74777c;
+
+  .col-sm-12 {
+    background-color: rgba(255, 255, 255, 0.7);
+    float: right;
+    z-index: 99;
+    border-radius: 7px;
+  }
+
+  .chosen-container {
+    text-align: left;
+  }
+
+  .chosen-container-single .chosen-single {
+    background-color: #fff;
+  }
+
+  form {
+    margin-top: 25px;
+
+    .form-control {
+      text-align: left;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .form-control-large,
+    .form-control-small {
+      width: 280px;
+      display: inline-block;
+      margin: 0 10px;
+
+      .form-control,
+      .chosen-container {
+        margin-bottom: 15px;
+        width: 100%;
+      }
+    }
+
+    .form-control-large {
+      @media screen and (max-width: 320px) {
+        width: 280px;
+      }
+    }
+
+    .form-control-small {
+      width: 188px;
+
+      @media screen and (max-width: 425px) {
+        width: unset;
+      }
+
+      @media screen and (max-width: 320px) {
+        width: 280px;
+      }
+    }
+
+    .btn {
+      height: 39px;
+      margin: 0 10px 10px 10px;
+
+      &.btn-fullcolor {
+        background-color: $yellow;
+        border-color: transparent;
+        color: #000;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        max-width: 280px;
+      }
+    }
+  }
+
+  &.open {
+    border-top-color: rgba(0, 0, 0, 0.2);
+
+    .container {
+      max-height: 700px;
+    }
+  }
+}

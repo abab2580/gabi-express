@@ -1,0 +1,93 @@
+.custom-form {
+  .form-group {
+    position: relative;
+    margin: 30px 0;
+
+    &::before {
+      content: "";
+      height: 1px;
+      width: 100%;
+      bottom: 0;
+      position: absolute;
+      background: #c6c6c6;
+      left: 0;
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  input,
+  textarea {
+    background: transparent;
+    color: $dark;
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    position: relative;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      background: none;
+    }
+
+    &:focus ~ label,
+    &:valid ~ label {
+      top: -14px;
+      font-size: 12px;
+      color: $dark;
+    }
+
+    /* input[type="email"] which is blur but invalid */
+    &[type="email"]:not(:focus):invalid {
+      color: transparent;
+    }
+
+    &:invalid ~ .bar {
+      background-color: #ff4949;
+    }
+
+    &:focus ~ .bar,
+    &:required:valid ~ .bar {
+      width: 100%;
+    }
+  }
+
+  label {
+    color: rgba(24, 25, 27, 0.67);
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.3s ease all;
+    width: 100%;
+  }
+
+  .bar {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 2px;
+    width: 0;
+    bottom: 0px;
+    position: absolute;
+    background: $blue;
+    transition: 0.3s ease all;
+    left: 0%;
+  }
+
+  button[type="submit"] {
+    padding: 5px 25px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,191 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Page Title -->
+    <title>Panier - Gabi Express</title>
+
+  </head>
+  <body>
+
+    <!-- BEGIN HEADER -->
+    <header class="l-header">
+      <div id="l-nav" class="l-nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav class="navbar navbar-expand-md navbar-light">
+              
+                <a class="navbar-brand" href="">
+                  <img src="img/logo-grand.png" class="img-fluid">
+                </a>	
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto py-4 py-md-0">
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                      <a class="nav-link" href="{{ path ('help')}}">Aide</a>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mon compte</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Recommander un ami</a>
+                        <a class="dropdown-item" href="#">Mes transactions</a>
+                        <a class="dropdown-item" href="#">Mon profil</a>
+                      </div>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">EN</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">FR</a>
+                      </div>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link nav-cart" data-cart="2" href="#">
+                        <i class="fas fa-cart-arrow-down"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>		
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- BEGIN MAIN CONTENT -->
+    <main class="l-main">
+      <section class="l-banner">
+        <div class="container">
+          <div class="custom-title text-white">Mon panier</div>
+          <p class="custom-text text-white">Parcourez les questions les plus fréquemment posées</p>
+        </div>
+      </section>
+
+      <div class="l-basket mount-grey">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="table-responsive">
+                <table class="table table-borderless table-basket">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col">Produits</th>
+                      <th scope="col">Prix</th>
+                      <th scope="col">Quantité</th>
+                      <th scope="col">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <img src="img/products/product2.png" alt="">
+                      </th>
+                      <td>
+                        <span class="product-title">Sachet Lait Nido</span>
+                        <span class="product-description">Fortifié 12 G</span>
+                      </td>
+                      <td>
+                        <span class="product-price">150 Fcfa</span>
+                      </td>
+                      <td>
+                        <form action="#" class="detail-form">
+                          <div class="form-qte">
+                            <span class="controls">-</span>
+                            <input type="text" readonly="readonly" value="1">
+                            <span class="controls">+</span>
+                          </div>
+                        </form>
+                      </td>
+                      <td>
+                        <span class="product-price">300 Fcfa</span>
+                      </td>
+                      <td>
+                        <button class="product-delete"><i class="fas fa-times"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <img src="img/products/product3.png" alt="">
+                      </th>
+                      <td>
+                        <span class="product-title">Biscuit Kreams Vanille</span>
+                        <span class="product-description">17 G</span>
+                      </td>
+                      <td>
+                        <span class="product-price">125 Fcfa</span>
+                      </td>
+                      <td>
+                        <form action="#" class="detail-form">
+                          <div class="form-qte">
+                            <span class="controls">-</span>
+                            <input type="text" readonly="readonly" value="2">
+                            <span class="controls">+</span>
+                          </div>
+                        </form>
+                      </td>
+                      <td>
+                        <span class="product-price">250 Fcfa</span>
+                      </td>
+                      <td>
+                        <button class="product-delete"><i class="fas fa-times"></i></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="resume-basket">
+          <div class="container">
+            <table class="table table-borderless table-resume">
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    Sous-total
+                  </th>
+                  <td>
+                    <span class="resume-price">550 Fcfa</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Frais de service
+                  </th>
+                  <td>
+                    <span class="resume-price">125 Fcfa</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Total
+                  </th>
+                  <td>
+                    <span class="resume-price pink">125 Fcfa</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <a href="#" class="btn btn-lg btn-fullcolor">Valider le panier</a>
+                  </td>
+                </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+  </body>
+</html>
+{% endblock %}

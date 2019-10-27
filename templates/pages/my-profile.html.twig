@@ -1,0 +1,161 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Page Title -->
+    <title>My profile - Gabi Express</title>
+
+  </head>
+  <body>
+
+    <!-- BEGIN HEADER -->
+    <header class="l-header">
+      <div id="l-nav" class="l-nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav class="navbar navbar-expand-md navbar-light">
+              
+                <a class="navbar-brand" href="">
+                  <img src="img/logo-grand.png" class="img-fluid">
+                </a>	
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto py-4 py-md-0">
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                      <a class="nav-link" href="{{ path ('help')}}">Aide</a>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mon compte</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Recommander un ami</a>
+                        <a class="dropdown-item" href="#">Mes transactions</a>
+                        <a class="dropdown-item" href="#">Mon profil</a>
+                      </div>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">EN</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">FR</a>
+                      </div>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link nav-cart" data-cart="2" href="#">
+                        <i class="fas fa-cart-arrow-down"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>		
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- BEGIN MAIN CONTENT -->
+    <main class="l-main">
+      <div class="breadcrumb-block">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="breadcrumb-block-row">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ path ('home')}}">Accueil</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Mes informations</li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="l-profile">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="profile-title">Profil</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="side-nav">
+                <h2 class="side-nav-title">Georges Gaston</h2>
+                <nav>
+                  <ul>
+                    <li class="active">
+                      <a href="#">Mon profil</a>
+                    </li>
+                    <li class="active">
+                      <a href="#">Mes commandes <span class="badge badge-light">1</span></a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="col-lg-9">
+              <div class="profile-content">
+                <h2 class="profile-content-title">Mes informations</h2>
+                <div class="info">
+                  <span class="label">Noms:</span>
+                  <span class="label-info">JARETH NTEBE</span>
+                </div>
+                <div class="info">
+                  <span class="label">Prénoms:</span>
+                  <span class="label-info">Joël Thierry</span>
+                </div>
+                <br>
+                <div class="info">
+                  <span class="label">Email:</span>
+                  <span class="label-info">ntebej@gmail.com</span>
+                </div>
+                <div class="info">
+                  <span class="label">Téléphone:</span>
+                  <span class="label-info">694 75 22 24</span>
+                </div>
+                <br>
+                <div class="info">
+                  <span class="label">Mot de passe:</span>
+                  <span class="label-info">*****</span>
+                </div>
+                <br>
+                <a href="#" class="btn btn-lg btn-fullcolor">Modifier</a>
+              </div>
+              <div class="profile-content">
+                <h2 class="profile-content-title">Adresse</h2>
+                <div class="info">
+                  <span class="label">Pays:</span>
+                  <span class="label-info">Allemagne</span>
+                </div>
+                <div class="info">
+                  <span class="label">Ville:</span>
+                  <span class="label-info">Munich</span>
+                </div>
+                <br>
+                <div class="info">
+                  <span class="label">Code postal:</span>
+                  <span class="label-info">N/A</span>
+                </div>
+                <br>
+                <a href="#" class="btn btn-lg btn-fullcolor">Modifier</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+  </body>
+</html>
+{% endblock %}

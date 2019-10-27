@@ -24,10 +24,32 @@ class HomeController extends AbstractController
         return $this->render('home/home.html.twig');
     }
 
-      /**
-     * @Route("/a_propos_de_nous", name="a_propos")
+    /**
+     * @Route("/about", name="about")
      */
-    public function propos(){
-        return $this->render('pages/apropos.html.twig');
+    public function about(){
+        return $this->render('pages/about.html.twig');
     }
+
+    /**
+     * @Route("/cgu", name="cgu")
+     */
+    public function cgu(){
+        return $this->render('pages/cgu.html.twig');
+    }
+
+    /**
+     * @Route("/faq", name="faq")
+     */
+    public function faq(){
+        return $this->render('pages/faq.html.twig');
+    }
+
+    /**
+     * @Route("/help", name="help")
+     */
+    public function help(){
+        return $this->render('pages/help.html.twig');
+    }
+
 }

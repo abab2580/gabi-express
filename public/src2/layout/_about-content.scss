@@ -1,0 +1,45 @@
+.l-about-content {
+	padding: 50px 0;
+
+	@media screen and (max-width: 425px) {
+		padding: 20px 0 35px 0;
+	}
+
+	.media {
+		margin-bottom: 60px;
+
+		@media screen and (max-width: 425px) {
+			flex-direction: column;
+		    align-items: center;
+
+		    img {
+		    	margin: 20px 0;
+		    }
+		}
+
+		@media screen and (max-width: 992px) {
+			img {
+				width: 50%;
+			}
+		}
+
+		
+	}
+
+	.media-body {
+		color: #777777;
+		font-size: 16px;
+		line-height: 22px;
+
+		@media screen and (max-width: 425px) {
+			text-align: center;
+		}
+	}
+
+	.media-title {
+		color: #000000;
+		font-size: 36px;
+		font-weight: 400;
+		margin-bottom: 50px;
+	}
+}

@@ -1,0 +1,31 @@
+.social-networks {
+  margin-top: 20px;
+
+  .social-network {
+    display: inline-block !important;
+    margin-bottom: 18px !important;
+    margin-right: 5px;
+    height: 39px;
+    width: 39px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 39px;
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease-in-out;
+
+    &:hover {
+      top: -5px;
+    }
+  }
+
+  &.white .social-network {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+
+  &.dark .social-network {
+    border: 1px solid rgba(24, 26, 28, 0.5);
+    color: $dark;
+  }
+}

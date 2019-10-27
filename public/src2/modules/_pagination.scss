@@ -1,0 +1,33 @@
+.pagination {
+	margin-left: auto;
+
+	.pagination {
+
+		& > li:last-child a, & > li:first-child a {
+			border-radius: 50%;
+			height: 30px;
+			width: 30px;
+		}
+	}
+
+	.page-link {
+		color: rgba(0, 0, 0, .54);
+		font-size: 14px;
+		font-weight: 500;
+		border: none;
+		background-color: unset;
+		border-radius: 50%;
+		height: 30px;
+		width: 30px;
+		margin: 0 2px;
+
+
+		&:hover {
+			background-color: rgba(237, 63, 78, 0.3);
+		}
+	}
+
+	.page-item.active .page-link {
+		background-color: $pink !important;
+	}
+}

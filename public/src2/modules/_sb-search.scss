@@ -1,0 +1,125 @@
+.sb-search {
+  position: relative;
+  margin-top: 37px;
+  margin-left: 20px;
+  width: 0%;
+  min-width: 30px;
+  height: 30px;
+  float: right;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+  backface-visibility: hidden;
+
+  @media screen and (max-width: 767px) {
+    float: unset;
+    margin-left: 0;
+  }
+
+  .sb-search-input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    outline: none;
+    background: #fff;
+    width: 100%;
+    height: 30px;
+    margin: 0;
+    z-index: 10;
+    padding: 0 0 0 28px;
+    font-family: inherit;
+    color: #74777c;
+    font-size: 13px;
+    border: 1px solid #e4e4e4;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    &::-webkit-input-placeholder {
+      color: #74777c;
+    }
+
+    &:-moz-placeholder {
+      color: #74777c;
+    }
+
+    &::-moz-placeholder {
+      color: #74777c;
+    }
+
+    &:-ms-input-placeholder {
+      color: #74777c;
+    }
+
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+  }
+
+  .sb-icon-search,
+  .sb-search-submit {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .sb-search-submit {
+    background: #fff;
+    /* IE needs this */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    /* IE 8 */
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    color: transparent;
+    border: none;
+    outline: none;
+    z-index: -1;
+  }
+  .sb-icon-search {
+    color: #74777c;
+    z-index: 90;
+    font-size: 15px;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+.sb-search-open .sb-search-input {
+  padding: 0 14px;
+}
+
+/* Open state */
+.sb-search.sb-search-open,
+.no-js .sb-search {
+  width: 170px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+.sb-search.sb-search-open .sb-icon-search,
+.no-js .sb-search .sb-icon-search {
+  color: $blue;
+  z-index: 11;
+}
+.sb-search.sb-search-open .sb-search-submit,
+.no-js .sb-search .sb-search-submit {
+  z-index: 90;
+}

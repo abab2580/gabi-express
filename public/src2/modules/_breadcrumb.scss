@@ -1,0 +1,39 @@
+.breadcrumb-block {
+	background-color: #f5f5f5;
+	padding: 30px 0;
+
+	.breadcrumb {
+		background-color: unset;
+		padding-left: 0;
+		margin-bottom: 0;
+
+		@media screen and (max-width: 768px) {
+			margin-bottom: 15px;
+		}
+	}
+
+	.breadcrumb > .breadcrumb-item {
+
+		&.active a {
+			color: #000;
+		}
+
+		a {
+			opacity: 0.9;
+			color: $pink;
+			font-size: 16px;
+			font-size: 500;
+		}
+	}
+
+	.breadcrumb-block-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@media screen and (max-width: 768px) {
+			flex-direction: column;
+			align-items: unset;
+		}
+	}
+}

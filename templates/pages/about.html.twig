@@ -1,0 +1,163 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Page Title -->
+    <title>A propos - Gabi Express</title>
+
+  </head>
+  <body>
+
+    <!-- BEGIN HEADER -->
+    <header class="l-header bg-img about">
+      <div id="l-nav" class="l-nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav class="navbar navbar-expand-md navbar-light">
+
+                <a class="navbar-brand" href="">
+                  <img src="img/logo-grand.png" class="img-fluid">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto py-4 py-md-0">
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                      <a class="nav-link" href="{{ path ('help')}}">Aide</a>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link nav-auth" href="{{ path ('register')}}">S'inscire</a>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link nav-auth" href="{{ path ('login')}}">Se connecter</a>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">EN</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">FR</a>
+                      </div>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link nav-cart" data-cart="2" href="#">
+                        <i class="fas fa-cart-arrow-down"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h1 class="header-title text-left text-light">A propos de nous</h1>
+        <p class="header-text text-left text-light">
+          Nous changeons la façon dont<br>
+          des millions de familles prennent<br>
+          soin de leurs membres
+        </p>
+      </div>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- BEGIN MAIN CONTENT -->
+    <main class="l-main">
+      <section class="l-about-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="media">
+                <img src="img/img-left.png" class="mr-3" alt="...">
+                <div class="media-body align-self-center">
+                  <h5 class="media-title mt-0">Pourquoi Gabi Express</h5>
+                  Depuis plus d’un an, nous avons entrepris une aventure incroyable à Familov. Tous les jours des millions de personnes envoient de l’argent à l’étranger.Elle recherchent toujours le moyen de réduire les frais de transfer et surtout rendre leur argent plus efficace. Nous nous sommes posé une grande question: comment pouvons-nous les aider a atteindre cet objectif?
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="media">
+                <div class="media-body align-self-center">
+                  <h5 class="media-title mt-0">Pourquoi Gabi Express</h5>
+                  Depuis plus d’un an, nous avons entrepris une aventure incroyable à Familov. Tous les jours des millions de personnes envoient de l’argent à l’étranger.Elle recherchent toujours le moyen de réduire les frais de transfer et surtout rendre leur argent plus efficace. Nous nous sommes posé une grande question: comment pouvons-nous les aider a atteindre cet objectif?
+                </div>
+                <img src="img/img-right.png" class="ml-3" alt="...">
+              </div>
+            </div>
+          </div>
+          <br><br>
+          <div class="btn-center">
+            <a href="#" class="btn btn-fullcolor">Commencez dès maintenant</a>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- BEGIN CHOICE PROPERTY -->
+      <section class="l-why-us background-grey normal">
+        <div class="container">
+          <h3 class="custom-title">Nos valeurs</h3>
+          <div class="row">
+              <div class="col-md-4">
+                <div class="card card-custom value">
+                  <div class="card-icon">
+                    <i class="fas fa-thumbs-up"></i>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Embrasser la transparence</h5>
+                    <p class="card-text text-center">
+                     Nous valorisons et respectons vraiment nos clients et nos partenaires. Si ce n'était pas pour eux, nous ne serions pas nous.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card card-custom value">
+                  <div class="card-icon">
+                    <i class="fas fa-smile"></i>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Impact positif</h5>
+                    <p class="card-text text-center">
+                      Nous nous soucions les uns des autres et croyons en des relations dans lesquelles les gens se valorisent et se soutiennent mutuellement.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card card-custom value">
+                  <div class="card-icon">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Passion</h5>
+                    <p class="card-text text-center">
+                      Nous aimons aider nos clients à atteindre leurs objectifs, prendre soin de leurs proches ou simplement faire fructifier leurs économies.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+          <div class="btn-center">
+            <a href="{{ path ('contact')}}" class="btn btn-sm btn-fullcolor">Contactez-nous</a>
+          </div>
+          </div>
+        </div>
+      </section>
+      <!-- END CHOICE PROPERTY -->
+
+    </main>
+
+  </body>
+</html>
+{% endblock %}

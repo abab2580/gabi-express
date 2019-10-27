@@ -1,0 +1,91 @@
+.l-ccm {
+  background-color: #fff;
+  padding: 50px 0;
+
+  .ccm-title {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .btn-fullcolor {
+    padding: 5px 25px;
+    border-radius: 0;
+    height: 50px;
+    line-height: 40px;
+  }
+
+  .ccm-step {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    .ccm-step-title {
+      color: #000000;
+      font-size: 24px;
+      font-weight: 400;
+      margin-top: 10px;
+    }
+
+    .ccm-step-description {
+      opacity: 0.7;
+      color: #000000;
+      font-size: 18px;
+      font-weight: 400;
+      text-align: center;
+      margin-top: 15px;
+    }
+  }
+
+  .ccm-help-step {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &.inverse {
+      flex-direction: row-reverse;
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+
+      &.inverse {
+        flex-direction: column;
+      }
+
+      img {
+        width: 50% !important;
+      }
+    }
+
+    .number {
+      color: #18191b;
+      font-size: 48px;
+      font-weight: 700;
+    }
+
+    .ccm-help-step-title {
+      color: #18191b;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .media-body {
+      color: #18191b;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .block {
+      width: 50%;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+  }
+}

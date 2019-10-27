@@ -1,0 +1,105 @@
+.l-footer {
+  background-color: #181a1c;
+  padding: 100px 0 0 0;
+  position: relative;
+  z-index: 1;
+
+  @media screen and (max-width: 768px) {
+    .container {
+      margin-bottom: 30px;
+    }
+  }
+
+  .footer-title {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 50px;
+  }
+
+  .footer-logo {
+    color: $blue;
+    font-size: 46px;
+    font-weight: bold;
+    margin-top: -23px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 34px;
+      margin-top: -13px;
+    }
+  }
+
+  .footer-text,
+  .footer-links a {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 0;
+  }
+
+  .footer-links a {
+    display: block;
+    margin-bottom: 18px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .copyright {
+    height: 30px;
+    background-color: $pink;
+    color: #fff;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  form {
+    input {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background-color: transparent;
+      color: #fff !important;
+      border-radius: 0;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background-color: transparent;
+      }
+    }
+
+    .btn-fullcolor {
+      border-radius: 0;
+    }
+  }
+
+  @media screen and (max-width: 574px) {
+    .footer-title {
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+      margin-bottom: 20px;
+    }
+
+    .row > div:last-child .footer-links {
+      margin-bottom: unset;
+      border-bottom: none;
+    }
+  }
+}

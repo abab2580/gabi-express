@@ -1,0 +1,175 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Page Title -->
+    <title>Inscription - Gabi Express</title>
+ 
+  </head>
+  <body>
+
+    <!-- BEGIN HEADER -->
+    <header class="l-header">
+      <div id="l-nav" class="l-nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav class="navbar navbar-expand-md navbar-light">
+              
+                <a class="navbar-brand" href="">
+                  <img src="img/logo-grand.png" class="img-fluid">
+                </a>  
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto py-4 py-md-0">
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                      <a class="nav-link" href="{{ path ('help')}}">Aide</a>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link nav-auth" href="{{ path ('register')}}">S'inscire</a>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link nav-auth" href="{{ path ('login')}}">Se connecter</a>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">EN</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">FR</a>
+                      </div>
+                    </li>
+                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link nav-cart" data-cart="2" href="#">
+                        <i class="fas fa-cart-arrow-down"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>    
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- BEGIN MAIN CONTENT -->
+    <main class="l-main">
+      
+      <section class="l-authentification register">
+        <div class="container">
+          <div class="parent-blck">
+            <div class="auth">
+              <h1 class="custom-title">Créer un compte</h1>
+         
+              <form action="{{ path('register') }}" method="post">
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nom" name="" required>
+                </div>
+                <br>
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Prénom" name="">
+                </div>
+                <br>
+                <div class="form-group">
+                  <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" name="">
+                </div>
+                <br>
+                <div class="form-group">
+                  <input type="tel" class="form-control form-control-lg" placeholder="N° de téléphone" name="_username">
+                </div>
+                <br>
+                <div class="input-group input-group-lg">
+                    <input type="password" class="form-control register-form-input-password" id="password" placeholder="Mot de passe" name="">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-eye"><i class="fas fa-eye-slash"></i></span>
+                    </div>
+                </div>
+                <br>
+                 <div class="input-group input-group-lg">
+                    <input type="password" class="form-control register-form-input-password" id="password" placeholder=" Répétez votre mot de passe" name="">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-eye"><i class="fas fa-eye-slash"></i></span>
+                    </div>
+                </div>
+                 <br>  
+                <button type="submit" class="btn btn-fullcolor">Créer le compte</button>
+              </form>
+                
+              <br>
+              <div class="or">
+                <span>ou</span>
+              </div>
+              <br>
+              <div class="other-auth">
+                <a href="#" class="btn btn-lg btn-other-auth google">
+                  <i class="fab fa-google"></i> Avec Google
+                </a>
+                <a href="#" class="btn btn-lg btn-other-auth facebook">
+                  <i class="fab fa-facebook-f"></i> Avec Facebook
+                </a>
+              </div>
+              <br>
+              <p class="auth-text">Déjà inscrit ?</p>
+              <a class="auth-link" href="{{ path ('login')}}">Se connecter</a>
+            </div>
+            <div class="side-img">
+              <h2 class="side-img-text">
+                Faites du bien à ceux<br>
+                que vous aimez<br>
+
+                <span style="font-size: 28px;">Créez un compte</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <script src="vendor2/intl-tel-input/js/intlTelInput.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        var input = document.querySelector("input[type=tel]");
+        window.intlTelInput(input, {
+          initialCountry: "auto",
+          geoIpLookup: function(callback) {
+            // $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+            //   var countryCode = (resp && resp.country) ? resp.country : "";
+            //   console.log(callback)
+            //   callback("CM");
+            // });
+            callback("CM");
+          },
+          utilsScript: "vendor2/intl-tel-input/js/utils.js",
+        });
+
+        // Toggle Eye/Eye Slash in input password on register form
+        const btnEye = document.querySelector("#basic-eye");
+
+        if (btnEye) {
+          let inputPwd;
+
+          inputPwd = btnEye.parentElement.parentElement.firstElementChild;
+
+          btnEye.addEventListener("click", function(e) {
+            if (inputPwd.getAttribute("type") === "password") {
+              inputPwd.setAttribute("type", "text");
+              btnEye.innerHTML = '<i class="fas fa-eye"></i>';
+            } else {
+              inputPwd.setAttribute("type", "password");
+              btnEye.innerHTML = '<i class="fas fa-eye-slash"></i>';
+            }
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
+{% endblock %}

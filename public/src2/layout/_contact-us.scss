@@ -1,0 +1,87 @@
+.l-contact-us {
+	padding-bottom: 80px;
+
+	 @media screen and (max-width: 768px) {
+	    margin-top: -145px;
+	  }
+
+	 @media screen and (max-width: 375px) {
+	    margin-top: -100px;
+	  }
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 200px;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #f5f5f5;
+		z-index: 0;
+	}
+
+	.contact-block {
+		box-shadow: 0 0 27px rgba(0, 0, 0, 0.13);
+		background-color: #ffffff;
+		padding: 30px 50px; 
+		width: 100%;
+		border-radius: 7px;
+		margin-top: 20px;
+	}
+
+	.contact-block-title {
+		color: $pink;
+		font-size: 24px;
+		font-weight: 400;
+	}
+
+	.form-contact {
+		width: 100%;
+		max-width: 540px;
+		margin: 0 auto;
+		margin-top: 30px;
+	}
+
+	.other-infos {
+		display: flex;
+		justify-content: space-between;
+
+		@media screen and (max-width: 992px) {
+			flex-direction: column;
+		}
+	}
+
+	.infos {
+		display: flex;
+		flex-direction: column;
+
+		@media screen and (max-width: 992px) {
+			margin-bottom: 10px;
+		}
+
+		.label {
+			opacity: 0.67;
+			color: #000000;
+			font-size: 16px;
+		}
+
+		.media {
+			margin-top: 10px;
+			border: 1px solid rgba(0, 0, 0, 0.27);
+			border-radius: 7px;
+			padding: 15px;
+
+			.media-body {
+				color: #000000;
+				font-size: 16px;
+			}
+
+			h5 {
+				opacity: 0.67;
+				color: #000000;
+				font-family: Montserrat;
+				font-size: 16px;
+			}
+		}
+	}
+}
