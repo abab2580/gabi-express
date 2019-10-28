@@ -25,35 +25,46 @@ class GeUser implements UserInterface
      * @ORM\Column(type="string", length=255, nullable=false)
      * @Assert\NotBlank(message="vous avez pas saisi le nom")
      * @Assert\Regex(
-     * pattern="",
-     * match=false,
+     * pattern="/^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸ._\s-]{2,50}$/",
      * message="Veuillez saisir un nom valide et respecter le format ")
      */
     private $last_name;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="vous avez pas saisi le prenom")
      * @Assert\Regex(
-     * pattern="/\d/",
-     * match=false,
+     * pattern="/^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸ._\s-]{2,50}$/",
      * message="Veuillez saisir un prenom valide et  respecter le format ")
      */
     private $first_name;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="vous avez pas saisi le mail")
      * @Assert\Email()
+     * @Assert\Regex(
+     * pattern = "/^[a-zA-Z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/",
+     * message = "Veuillez respecter le format du mail")
      */
     private $email;
 
     /**
      * @ORM\Column(type="string")
+     *  @Assert\NotBlank(message="vous avez pas saisi le numero de téléphone")
+     * @Assert\Regex(
+     * pattern = "/^[0-9]+$/",
+     * message = "le numero de téléphone doit contenir que des chiffres")
      */
     private $phone;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\Length(min="8", minMessage="Votre mot de passe doit faire minimum 8 caractères")
+     * @Assert\NotBlank(message="vous avez pas saisi le mot de passe ")
+     * @Assert\Regex(
+     * pattern = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,32}$/",
+     * message ="Votre Mot de passe doit contenir au moins 8 caractère dont une lettre majuscule, une lettre minuscule, un chiffre, et/ou un caractères spécial")
+     * 
      */
     private $password;
 
@@ -62,7 +73,7 @@ class GeUser implements UserInterface
      */
     public $confirm_password;
 
-   // /**
+    // /**
     // * le token qui servira lors de l'oubli de mot de passe
     // * @ORM\Column(type="string", length=255, nullable=true)
     // */
@@ -121,12 +132,12 @@ class GeUser implements UserInterface
         return $this;
     }
 
-    public function getPhone(): ?int
+    public function getPhone(): ?string
     {
         return $this->phone;
     }
 
-    public function setPhone(int $phone): self
+    public function setPhone(string $phone): self
     {
         $this->phone = $phone;
 
