@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
 
     <!-- Page Title -->
-    <title>Conditions Générales d'Utilisation - Gabi Express</title>
+    <title>Contact - Gabi Express</title>
 
   </head>
   <body>
@@ -19,9 +19,9 @@
             <div class="col-12">
               <nav class="navbar navbar-expand-md navbar-light">
 
-              <a class="navbar-brand" href="{{ path ('home')}}">
+                <a class="navbar-brand" href="">
                   <img src="img/logo-grand.png" class="img-fluid">
-              </a>
+                </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -38,7 +38,6 @@
                         <a class="dropdown-item" href="#">Recommander un ami</a>
                         <a class="dropdown-item" href="#">Mes transactions</a>
                         <a class="dropdown-item" href="#">Mon profil</a>
-                        <a class="nav-link nav-auth" href="{{ path ('logout')}}">Deconnexion</a>
                       </div>
                     </li>
                     <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
@@ -66,21 +65,78 @@
     <main class="l-main">
       <section class="l-banner">
         <div class="container">
-          <h1 class="custom-title text-white">CGU</h1>
+          <div class="custom-title text-white">Contactez-nous</div>
+          <p class="custom-text text-white">Pour toutes vos questions, ou besoins de services particuliers, nous nous ferons un plaisir de vous répondre</p>
         </div>
       </section>
 
-      <div class="l-cgu mount-grey">
+      <div class="l-contact-us mount-grey">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <h2 class="cgu-title">1. Préambule</h2>
-              <p class="text-description">
-                Les présentes conditions générales d'utilisation et de vente du service au nom commercial Familov.com régissent exclusivement les relations entre Gabi Express et l’utilisateur du Service.
-              </p>
+              <div class="contact-block">
+                <h2 class="contact-block-title text-center">Remplissez le formulaire</h2>
+                <br>
+               
+            {{ form_start(form)  }}
+
+              {{ form_row(form.nom)}}
+              {{ form_row(form.email)}}
+              {{ form_row(form.message)}}
+               <button type="submit" class="btn btn-fullcolor">Envoyer le message</button>
+            {{ form_end(form) }}
+
+
+
+
+                 
+                     
+        
+                
+              </div>
             </div>
           </div>
           <br>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="contact-block">
+                <h2 class="contact-block-title text-center">Autres informations de contact</h2>
+                <br>
+                <div class="other-infos">
+                  <div class="infos">
+                    <span class="label">Ecrivez-nous</span>
+                    <div class="media">
+                      <img src="img/icons/icons8-edit-message-48.png" class="mr-3 align-self-center">
+                      <div class="media-body">
+                        <h5 class="mt-0">Email</h5>
+                        contact@gabiexprex.com
+                      </div>
+                    </div>
+                  </div>
+                  <div class="infos">
+                    <span class="label">Appel | Whatsapp</span>
+                    <div class="media">
+                      <img src="img/icons/icons8-android-48.png" class="mr-3 align-self-center">
+                      <div class="media-body">
+                        <h5 class="mt-0">Téléphone</h5>
+                        +237 6 94 75 22 24
+                      </div>
+                    </div>
+                  </div>
+                  <div class="infos">
+                    <span class="label">Adresse</span>
+                    <div class="media">
+                      <img src="img/icons/icons8-home-address-90.png" class="mr-3 align-self-center">
+                      <div class="media-body">
+                        Bonamoussadi,<br>
+                        Douala - Cameroun
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

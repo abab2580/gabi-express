@@ -29,7 +29,7 @@ class SecurityController extends AbstractController
 
            return $this->redirectToRoute('login');
        }
-       return $this->render('security/index.html.twig', [
+       return $this->render('security/register.html.twig', [
        'form' =>$form->createView()
        ]);
     }
@@ -39,7 +39,9 @@ class SecurityController extends AbstractController
      * @Route("/connexion", name="login")
      */
     public function login(){
-        return$this->render('security/connexion.html.twig');
+    
+        $this->addFlash('danger', 'Votre mail ou mot de passe est incorrect');
+        return$this->render('security/connexion.html.twig');  
     }
 
 

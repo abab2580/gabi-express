@@ -19,7 +19,7 @@
             <div class="col-12">
               <nav class="navbar navbar-expand-md navbar-light">
 
-                <a class="navbar-brand" href="">
+                <a class="navbar-brand" href="{{ path ('home')}}">
                   <img src="img/logo-grand.png" class="img-fluid">
                 </a>
 
@@ -32,12 +32,20 @@
                     <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
                       <a class="nav-link" href="{{ path ('help')}}">Aide</a>
                     </li>
+                    {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                     <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                       <a class="nav-link nav-auth" href="{{ path ('register')}}">S'inscire</a>
                     </li>
+                    {% endif %}
+                    {% if not app.user %}
                     <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                       <a class="nav-link nav-auth" href="{{ path ('login')}}">Se connecter</a>
                     </li>
+                    {% else %}
+                     <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                      <a class="nav-link nav-auth" href="{{ path ('logout')}}">Se deconnecter</a>
+                    </li>
+                    {% endif %}
                     <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">EN</a>
                       <div class="dropdown-menu">
